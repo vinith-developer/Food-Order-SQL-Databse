@@ -1,0 +1,51 @@
+
+SQL> select*from food_customer;
+
+    CUS_ID CUS_NAME                                           CUS_ADDRESS                                        CUS_EMAIL                                          CUS_MOBILENUMBER
+---------- -------------------------------------------------- -------------------------------------------------- -------------------------------------------------- ----------------
+         1 Vinith                                             Dharmapuri                                         vinithvini2636@gmail.com                                 8148222908
+         2 Shanavs                                            Tirupattur                                         shanavasoff@gmail.com                                    8148222908
+         4 Sargu                                              Salem                                              sarguoff@gmail.com                                       8148222902
+         3 Tamil                                              Erode                                              tamildharshu@gmail.com                                   8148222903
+         5 Shiradeep                                          Coimbatore                                         Shiradeepoff@gmail.com                                   8148222904
+
+
+SQL> select*from orders;
+
+  ORDER_ID     CUS_ID    FOOD_ID   QUANTITY
+---------- ---------- ---------- ----------
+      1001          1        201          2
+      1002          2        202          3
+      1003          3        203          1
+      1004          4        204          3
+      1005          5        205          2
+
+SQL> select*from foods;
+
+   FOOD_ID FOOD_NAME                                          FOOD_PRICE RESTAURANT_ID
+---------- -------------------------------------------------- ---------- -------------
+       201 Chicken rice                                              120           103
+       202 Mutton Briyani                                            180           104
+       203 Chicken Grill                                             160           102
+       204 Non-Veg Meals                                             180           105
+       205 Chicken Briyani                                           150           101
+
+SQL> select*from Restaurant;
+
+RESTAURANT_ID RESTAURANT_NAME                                    RESTAURANT_RATING RESTAURANT_LOCATION
+------------- -------------------------------------------------- ----------------- --------------------------------------------------
+          101 Asif Briyani                                                     4.2 Erode
+          102 KFC                                                              4.1 Salem
+          103 Tandooori Corner                                                 4.2 Banglore
+          104 AM Briyani                                                       4.3 Tirupattur
+          105 Bhai kadai                                                       4.4 Dharmaputi
+
+SQL> select*from payments;
+
+PAYMENT_ID   ORDER_ID     AMOUNT PAYMENT_METHOD
+---------- ---------- ---------- --------------------------------------------------
+       123       1001        240 UPI
+       121       1002        540 UPI
+       122       1003        160 Cash
+       124       1004        540 Cash
+       125       1005        300 UPI
